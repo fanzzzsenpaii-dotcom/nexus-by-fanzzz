@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nexus AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="dot"></span>
+        <h1>Nexus AI</h1>
+      </div>
+      <select id="model-select">
+        <option value="gemini-2.0-flash">Flash</option>
+        <option value="gemini-1.5-pro">Pro</option>
+        <option value="gemini-1.5-flash">1.5 Flash</option>
+      </select>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="chat">💬 Chat</button>
+      <button class="tab" data-tab="image">🎨 Image</button>
+    </nav>
+
+    <!-- Chat Panel -->
+    <section class="panel active" id="panel-chat">
+      <div class="chat-box" id="chat-box">
+        <div class="msg bot">
+          <div class="bubble">Halo bos! Tanya apa saja, tanpa sensor. 🗿</div>
+        </div>
+      </div>
+      <form class="input-bar" id="chat-form">
+        <textarea id="chat-input" placeholder="Tulis pesan..." rows="1"></textarea>
+        <button type="submit" id="send-btn">➤</button>
+      </form>
+    </section>
+
+    <!-- Image Panel -->
+    <section class="panel" id="panel-image">
+      <div class="image-controls">
+        <textarea id="img-prompt" placeholder="Deskripsi gambar..."></textarea>
+        <div class="row">
+          <select id="aspect">
+            <option value="1:1">1:1</option>
+            <option value="16:9">16:9</option>
+            <option value="9:16">9:16</option>
+            <option value="4:3">4:3</option>
+            <option value="3:4">3:4</option>
+          </select>
+          <button id="gen-img-btn">Generate</button>
+        </div>
+      </div>
+      <div class="image-result" id="image-result">
+        <p class="placeholder">Hasil gambar muncul di sini...</p>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
